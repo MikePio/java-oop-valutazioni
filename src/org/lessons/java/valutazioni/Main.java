@@ -9,7 +9,6 @@ import java.util.Random;
 
 public class Main {
 
-
 	public static void main(String[] args) {
 	
 		int id = 0;
@@ -24,25 +23,14 @@ public class Main {
 			
 			id = i;
 			percentualeAssenze = rnd.nextInt(0, 101);
-			mediaVoti = rnd.nextFloat(0, 5);
+			mediaVoti = rnd.nextFloat(0, 5.01f);
 			
 			arrayStudenti[i] = new Studente(i, percentualeAssenze, mediaVoti);
 			
 			//stampa i dati di ogni studente
 			arrayStudenti[i].getInfoStudenti(i, percentualeAssenze, mediaVoti);
-			
+		
+			arrayStudenti[i].verificaPromozione(percentualeAssenze, mediaVoti);
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-}
-	
-	
-	
+	}	
 }
